@@ -1,0 +1,6 @@
+<ul>
+  <% _.each(patents, function(patent){ %>
+   <li><%= patent.get("title") %> - <%= patent.get("abstract") %></li>
+  <% }); %>
+</ul>
+

@@ -1,0 +1,63 @@
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- Chunk 02 - TOPICS -->
+	<div class="portheader" id="classes_summary">
+		<h2><a href="#">Classes <span>Filter</span></a></h2>
+		<div id="classes_summary_expanded">&nbsp;</div>
+		<div id="classes_summary_collapsed">
+		</div>		
+	</div><!-- /portheader -->
+	<form id="classes">
+	<div class="port-data"><div class="port-data-inner">
+	<div class="intro">
+	<p>Include proposals for selected Classes. Use the Summary sidebar to explore your selection.</p>
+	</div>
+	<div class="datacols">
+		<div class="datacol-left" id="classes_tabs_container">
+			<div class="tab-nav" id="classes_tabs">
+				<ul>
+					<li><a href="#classes_tab1">Class Data</a></li>
+				</ul>
+				<div class="data-tab data-tab1" id="classes_tab1">
+					<div class="table-holder">
+						<img id="classes_loader" class="loader" style="display:none" src="img/ajax-loader.gif" />						
+						<table id="classes_table" class="datatables"></table>
+					</div><!-- /table-holder -->
+					<div class="table-footnotes">
+						<ul>
+							<li>Class Relevance: each proposal is assigned a total of 4 Classes. The Class set is either based on a) the top/most relevant class for each proposal, or b) based on all four classes assigned to proposals.</li>
+							<li><sup>*</sup> Please note that the co-occurring classes noted within each Class\'s details view represent those Classes that co-occur most frequently together on proposals. While a good indicator of expertise, please note that using the ALL inclusion method yields researchers with Classes assigned to any of their proposals (not just those with selected Classes assigned to individual proposals). <strong>Internal NSF users:</strong> the ALL inclusion method only regards Awarded proposals (Declines and Others are excluded).</li>
+						</ul>
+					</div><!-- /table-footnotes -->				
+				</div><!-- /data-tab1 -->
+			</div><!-- /tab-nav -->			
+		</div><!-- /datacol-left -->
+		<div class="datacol-right">
+			<div class="summary"><div class="summary-inner">
+				<h2>Quick Selection Summary <a href="#" id="classes_selection_clear">Clear Selection</a></h2>
+				<p class="intro">The below reflects a summary of the Classes you  select/ed on the left. Click the triangle controls for expanded summaries or click the 'Explore'  buttons to analyze your selection deeper.</p>
+				
+<div id="classes_summary_container"></div>
+
+<div class="summary-block">
+	<div class="summary-header">
+		<h3>Patents (<span id="classes_summary_institutions_count"></span>)</h3>
+		<a href="#" class="explore" id="patents_classes_submit">Explore</a>
+	</div>
+</div><!-- /summary-block -->
+
+			</div></div><!-- /summary -->
+		</div><!-- /datacol-right -->
+	</div><!-- /datacols -->
+	
+	
+	</div></div><!-- /port-data -->
+	</form>
+
+<script id="classes_summary_collapsed_template" type="text/x-jquery-tmpl">
+<ul class="cols">
+	<li class="left">
+		<strong><em id="classes_summary_count_selected"></em> of <u id="classes_summary_count"></u></strong>
+	</li>
+	<li class="right" id="classes_summary_selected"></li>
+</ul>		
+<a href="#" class="change-selection" id="classes_summary_change">Change Selection</a>
+</script>

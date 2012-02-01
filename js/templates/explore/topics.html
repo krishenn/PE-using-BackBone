@@ -1,0 +1,71 @@
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- Chunk 02 - TOPICS -->
+	<div class="portheader" id="topics_summary">
+		<h2><a href="#">Topics <span>Filter</span></a></h2>
+		<div id="topics_summary_expanded">&nbsp;</div>
+		<div id="topics_summary_collapsed">
+		</div>		
+	</div><!-- /portheader -->
+	<form id="topics">
+	<div class="port-data"><div class="port-data-inner">
+	<div class="intro">
+	<p>Include proposals for selected Topics. Use the Summary sidebar to explore your selection.</p>
+	</div>
+	<div class="datacols">
+		<div class="datacol-left" id="topics_tabs_container">
+			<div class="tab-nav" id="topics_tabs">
+				<ul>
+					<li><a href="#topics_tab1">Topic Data</a></li>
+				</ul>
+				<div class="data-tab data-tab1" id="topics_tab1">
+					<div class="table-holder">
+						<img id="topics_loader" class="loader" style="display:none" src="img/ajax-loader.gif" />						
+						<table id="topics_table" class="datatables"></table>
+					</div><!-- /table-holder -->
+					<div class="table-footnotes">
+						<ul>
+							<li>Topic Relevance: each proposal is assigned a total of 4 Topics. The Topic set is either based on a) the top/most relevant topic for each proposal, or b) based on all four topics assigned to proposals.</li>
+							<li><sup>*</sup> Please note that the co-occurring topics noted within each Topic\'s details view represent those Topics that co-occur most frequently together on proposals. While a good indicator of expertise, please note that using the ALL inclusion method yields researchers with Topics assigned to any of their proposals (not just those with selected Topics assigned to individual proposals). <strong>Internal NSF users:</strong> the ALL inclusion method only regards Awarded proposals (Declines and Others are excluded).</li>
+						</ul>
+					</div><!-- /table-footnotes -->				
+				</div><!-- /data-tab1 -->
+			</div><!-- /tab-nav -->			
+		</div><!-- /datacol-left -->
+		<div class="datacol-right">
+			<div class="summary"><div class="summary-inner">
+				<h2>Quick Selection Summary <a href="#" id="topics_selection_clear">Clear Selection</a></h2>
+				<p class="intro">The below reflects a summary of the Topics you  select/ed on the left. Click the triangle controls for expanded summaries or click the 'Explore'  buttons to analyze your selection deeper.</p>
+				
+<div id="topics_summary_container"></div>
+
+<div class="summary-block">
+	<div class="summary-header">
+		<h3>Institutions (<span id="topics_summary_institutions_count"></span>)</h3>
+		<a href="#" class="explore" id="explore_topics_submit_institutions">Explore</a>
+	</div>
+</div><!-- /summary-block -->
+
+
+<div class="summary-block">
+	<div class="summary-header">
+		<h3>Researchers (<span id="topics_summary_researchers_count"></span>)</h3>
+		<a href="#" class="explore" id="explore_topics_submit_researchers">Explore</a>
+	</div>
+</div><!-- /summary-block -->
+
+			</div></div><!-- /summary -->
+		</div><!-- /datacol-right -->
+	</div><!-- /datacols -->
+	
+	
+	</div></div><!-- /port-data -->
+	</form>
+
+<script id="topics_summary_collapsed_template" type="text/x-jquery-tmpl">
+<ul class="cols">
+	<li class="left">
+		<strong><em id="topics_summary_count_selected"></em> of <u id="topics_summary_count"></u></strong>
+	</li>
+	<li class="right" id="topics_summary_selected"></li>
+</ul>		
+<a href="#" class="change-selection" id="topics_summary_change">Change Selection</a>
+</script>
