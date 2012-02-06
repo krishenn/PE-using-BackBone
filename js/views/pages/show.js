@@ -7,14 +7,15 @@ define([
     el: $('#main'),
     render: function(page){
 console.log(page);	
-//		$('#main').html( 'HELLO!' );		
+		$('#main').html( 'HELLO!' );		
 		require(['text!templates/pages/'+page+'.html'], function(template) {
-//		console.log(template);	
+console.log(template);	
 			// Using Underscore we can compile our template with data
-		    var data = {};
+		    var data = [];
 		    var compiledTemplate = _.template( template, data );
 		    // Append our compiled template to this Views "el"
-		    $('#main').html( compiledTemplate );		
+		    $('#main').html( compiledTemplate );
+console.log($('#main').html());				
 	    });
 		
 /*	  var template = define('text!templates/pages/'+page+'.html');

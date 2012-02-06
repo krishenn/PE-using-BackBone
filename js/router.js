@@ -18,16 +18,16 @@ define([
 	  'patents/:page/*params': 'explorePatents',
 	
       // Default
-      '*actions': 'defaultAction'
+      '*actions': 'defaultAction' //using splats
     },
 	//beware the zombies, do this
 	//from here http://lostechies.com/derickbailey/2011/09/15/zombies-run-managing-page-transitions-in-backbone-apps/
 	registerView: function(view) {
-	    if (this.currentView){
+	    /*if (this.currentView){
 //console.log('unloading');
 //console.log(this.currentView);
 	      this.currentView.close();
-	    }
+	    }*/
 
 	    this.currentView = view;		
 	},
@@ -93,11 +93,11 @@ console.log('initializing router');
    //beware the zombies, do this
    //from here http://lostechies.com/derickbailey/2011/09/15/zombies-run-managing-page-transitions-in-backbone-apps/
 	Backbone.View.prototype.close = function(){
-	  this.remove();
+	  /*this.remove();
 	  this.unbind();
 	  if (this.onClose){
 	    this.onClose();
-	  }
+	  }*/
 	}
   };
   return {

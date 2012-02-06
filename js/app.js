@@ -140,33 +140,31 @@ console.log('initializing app');
 	//console.log(data);
 			proposalaccessallowed = true;
 			apiurl = "http://128.150.10.70/py/api.py/";
-			//load topic legend
-			$.getJSON(apiurl+'topic?legend=topic'+'&jsoncallback=?', function(data) {
-				_.each(data, function(item) {
-					legend_topics[item["topic"]] = {"words":item["words"],"label":item["label"]};
-				});
-				// Pass in our Router module and call it's initialize function
-			    Router.initialize();
-			});					
-	//alert('success');
-	//alert(proposalaccessallowed);
-	//alert(apiurl);			
-	//console.log(apiurl);
+//alert('success');
+			//start
+			start();
 		},
 		error: function(x,t,m) {
-	//alert('error');
-	//alert(t);
+//alert('error');
+//alert(t);
 	//		console.log(data);
-			//load topic legend
-			$.getJSON(apiurl+'topic?legend=topic'+'&jsoncallback=?', function(data) {
-				_.each(data, function(item) {
-					legend_topics[item["topic"]] = {"words":item["words"],"label":item["label"]};
-				});
-				// Pass in our Router module and call it's initialize function
-			    Router.initialize();
-			});					
+			start();
 		}
 	});	
+  }
+
+  function start() {
+		//load topic legend
+		$.getJSON(apiurl+'topic?legend=topic'+'&jsoncallback=?', function(data) {
+			_.each(data, function(item) {
+				legend_topics[item["topic"]] = {"words":item["words"],"label":item["label"]};
+			});
+			// Pass in our Router module and call it's initialize function
+		    Router.initialize();
+		});					
+//alert(proposalaccessallowed);
+//alert(apiurl);			
+//console.log(apiurl);	
   }
 
   return {
